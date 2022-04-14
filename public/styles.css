@@ -1,0 +1,113 @@
+*{
+  color: whitesmoke;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+  background-color: black;
+}
+
+.game-container{
+  height: 100 vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-container{
+  text-align: center;
+  width: 510px;
+  border-bottom: solid 1px gray;
+  margin-bottom: 40px;
+}
+
+.tile-container{
+  /* background-color: white; */
+  width: 333px;
+  /* height: 10px; */
+  margin-bottom: 30px;
+}
+
+.key-container{
+  width: 510px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.key-container button{
+  width: 43px;
+  height: 58px;
+  border-radius: 2px;
+  border: none;
+  background-color: gray;
+  color: #ffffff;
+  margin: 4px;
+}
+
+.key-container button:nth-child(20),
+.key-container button:nth-child(28) {
+  width: 65px;
+}
+
+.key-container button:nth-child(11) {
+  margin-left: 30px;
+} 
+
+.tile-container div{
+  display: flex;
+  
+}
+.tile-container .tile{
+  width: 62px;
+  height: 62px;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  display: flex; /* this and follwing 2 are for letters */
+  justify-content: center;
+  align-items: center;
+  margin: 3px;
+}
+
+.message-container{
+  height:  70px;
+}
+
+.message-container p{
+  background-color:#818384 ;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0;
+}
+.tile.flip{
+  animation: 0.5s linear flipping;
+}
+
+@keyframes flipping {
+  0%{
+    transform: rotateX(0deg);
+  }
+  50%{
+    transform: rotateX(90deg);
+  }
+  100%{
+    transform: rotateX(0deg);
+  }
+}
+
+.gray-overlay{
+  background-color: #3a3a3c !important;
+  border: none !important;
+}
+
+
+.yellow-overlay{
+  background-color: #b59f3a !important;
+  border: none !important;
+}
+
+.green-overlay{
+  background-color: #538d4e !important;
+  border: none !important;
+} /* the order of these 3 styles are imp.*/
+
+
